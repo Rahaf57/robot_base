@@ -1,0 +1,519 @@
+{
+  "intents": [
+    {
+      "intent": "تأكيد",
+      "examples": [
+        {
+          "text": "إلغاء"
+        },
+        {
+          "text": "الغاء"
+        },
+        {
+          "text": "الغاء الطلب"
+        },
+        {
+          "text": "تأكيد"
+        },
+        {
+          "text": "تاكيد"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "ترحيب",
+      "examples": [
+        {
+          "text": "hi"
+        },
+        {
+          "text": "السلام عليكم"
+        },
+        {
+          "text": "السلام عليكم ورحمة الله وبركاته"
+        },
+        {
+          "text": "اهلا"
+        },
+        {
+          "text": "اهلاً"
+        },
+        {
+          "text": "سلام"
+        },
+        {
+          "text": "مرحبا"
+        },
+        {
+          "text": "هاي"
+        },
+        {
+          "text": "هلا"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "خدمات",
+      "examples": [],
+      "description": ""
+    },
+    {
+      "intent": "طلب",
+      "examples": [
+        {
+          "text": "1"
+        },
+        {
+          "text": "اطلب"
+        },
+        {
+          "text": "السبت"
+        },
+        {
+          "text": "بأطلب"
+        },
+        {
+          "text": "ربوت منزلي"
+        },
+        {
+          "text": "روبوت منزلي"
+        },
+        {
+          "text": "طلب"
+        },
+        {
+          "text": "طلب ربوت"
+        },
+        {
+          "text": "طلب ربوت منزلي"
+        },
+        {
+          "text": "طلب روبوت"
+        },
+        {
+          "text": "طلب روبوت منزلي"
+        },
+        {
+          "text": "هل ممكن اطلب"
+        },
+        {
+          "text": "واحد"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "مرحبا",
+      "examples": [
+        {
+          "text": "اهلاً"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "مشاكل",
+      "examples": [
+        {
+          "text": "إستفسار"
+        },
+        {
+          "text": "إستفسارات"
+        },
+        {
+          "text": "إقتراح"
+        },
+        {
+          "text": "إقتراحات"
+        },
+        {
+          "text": "استفسار"
+        },
+        {
+          "text": "استفسارات"
+        },
+        {
+          "text": "اقتراح"
+        },
+        {
+          "text": "اقتراحات"
+        },
+        {
+          "text": "عندي اقتراح"
+        },
+        {
+          "text": "عندي مشكلة"
+        },
+        {
+          "text": "عندي مشكله"
+        },
+        {
+          "text": "لدي اقتراح"
+        },
+        {
+          "text": "لدي مشكلة"
+        },
+        {
+          "text": "لدي مشكله"
+        },
+        {
+          "text": "مشاكل"
+        },
+        {
+          "text": "مشكلة"
+        },
+        {
+          "text": "مشكله"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "sys-currency",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-date",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-time",
+      "values": [],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1625945501669",
+      "context": {
+        "time": "@sys-time"
+      },
+      "conditions": "@sys-time",
+      "event_name": "input",
+      "dialog_node": "handler_1_1625945501670"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1625945558423",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_1_1625945558424"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1626025543531",
+      "context": {
+        "date_2": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_3_1626025543533"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "رائع ☺️!! يرجى اختيار الوقت المفضل.. على سبيل المثال ( الساعة 2 مساء )"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_5_1625945501669",
+      "event_name": "focus",
+      "dialog_node": "handler_5_1625945501670",
+      "previous_sibling": "handler_1_1625945501670"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "رائع ☺️!! يرجى اختيار اليوم المناسب لإستلام الشحنة .. على سبيل المثال ( يوم الاثنين ) "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_10_1625944862919",
+      "event_name": "focus",
+      "dialog_node": "handler_7_1625944862940",
+      "previous_sibling": "handler_9_1625944862940"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_10_1625944862919",
+      "context": {
+        "date": "@sys-date"
+      },
+      "conditions": "@sys-date",
+      "event_name": "input",
+      "dialog_node": "handler_9_1625944862940"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "ادخل عدد الروبوت التي تود الحصول عليها .. على سبيل المثال ( 2)"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_5_1625945558423",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1625945558424",
+      "previous_sibling": "handler_1_1625945558424"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "يرجى إدخال تاريخ التسليم المناسب بتنسيق DD-MM-YYYY ، على سبيل المثال 27-09-2021"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "slot_8_1626025543531",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1626025543533",
+      "previous_sibling": "handler_3_1626025543533"
+    },
+    {
+      "type": "standard",
+      "title": "خدمات",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "الرجاء كتابة الاجراء المطلوب:\n ⁃ طلب روبوت منزلي\n ⁃ للمشاكل والاقتراحات المتعلقة بالروبوت الرجاء الاتصال على هذا الرقم : 0966512345678 "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#خدمات",
+      "dialog_node": "node_2_1625939634723",
+      "previous_sibling": "node_8_1625937906497"
+    },
+    {
+      "type": "standard",
+      "title": "مشاكل",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "للمشاكل والاقتراحات المتعلقة بالروبوت الرجاء الاتصال على هذا الرقم : 0966512345678 "
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_2_1625939634723",
+      "conditions": "#مشاكل",
+      "dialog_node": "node_6_1625946525141",
+      "previous_sibling": "node_9_1625944752795"
+    },
+    {
+      "type": "standard",
+      "title": "ترحيب",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "\nمرحبا"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "body",
+        "dialog_node": "node_2_1625939634723"
+      },
+      "conditions": "#ترحيب",
+      "dialog_node": "node_8_1625937906497",
+      "previous_sibling": "node_8_1625946837255"
+    },
+    {
+      "type": "standard",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": " نسعد بتواصلكم معنا على هذه الخدمة "
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          },
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "node_8_1625946837255"
+    },
+    {
+      "type": "frame",
+      "title": "طلب",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "رائع!! تم تسجيل الطلب وسيتم التواصل معكم عندما يتم شحن الطلب .. شكراً لثقتكم"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1625939634723",
+      "conditions": "#طلب",
+      "dialog_node": "node_9_1625944752795"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1625944752795",
+      "variable": "$date",
+      "dialog_node": "slot_10_1625944862919",
+      "previous_sibling": "slot_5_1625945558423"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1625944752795",
+      "variable": "$time",
+      "dialog_node": "slot_5_1625945501669",
+      "previous_sibling": "slot_8_1626025543531"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1625944752795",
+      "variable": "$number",
+      "dialog_node": "slot_5_1625945558423"
+    },
+    {
+      "type": "slot",
+      "parent": "node_9_1625944752795",
+      "variable": "$date_2",
+      "dialog_node": "slot_8_1626025543531",
+      "previous_sibling": "slot_10_1625944862919"
+    },
+    {
+      "type": "standard",
+      "title": "أي شيء آخر",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "لم أفهم، يمكنك محاولة اعادة الصياغة"
+              },
+              {
+                "text": "هل يمكنك اعادة صياغة عبارتك؟ أنا لا فهم"
+              },
+              {
+                "text": "لم أفهم قصدك"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "أي شيء آخر",
+      "previous_sibling": "node_2_1625939634723",
+      "disambiguation_opt_out": true
+    }
+  ],
+  "counterexamples": [
+    {
+      "text": "الثلاثاء"
+    }
+  ],
+  "system_settings": {
+    "disambiguation": {
+      "prompt": ":هل قصدت",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "كل ما سبق خطأ"
+    },
+    "human_agent_assist": {
+      "prompt": ":هل قصدت"
+    }
+  },
+  "learning_opt_out": false,
+  "name": "تحدث",
+  "language": "ar",
+  "description": ""
+}
