@@ -34,7 +34,7 @@
   }
   #Left1{
       position: absolute;
-      left: 400px;
+      left: 650px;
       top: 195px;
       
      
@@ -51,7 +51,7 @@
   }
   #Right1{
       position: absolute;
-      left: 550px;
+      left: 835px;
       top: 195px;
       
       
